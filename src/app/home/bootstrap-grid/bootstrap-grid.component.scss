@@ -1,0 +1,19 @@
+@media (min-width: 1200px) {
+
+  .container {
+    max-width: 1900px;
+  }
+
+}
+
+div.row {
+
+  background-color: rgba(86, 61, 124, .15);
+
+  div {
+    border: 1px solid rgba(86, 61, 124, .2);
+    text-align: center;
+    background-color: rgba(86, 30, 100, .15);
+  }
+
+}
