@@ -1,69 +1,3 @@
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  overflow-x: hidden;
-}
-
-body.sticky-footer {
-  margin-bottom: 56px;
-}
-
-body.sticky-footer .content-wrapper {
-  min-height: calc(100vh - 56px - 56px);
-}
-
-body.fixed-nav {
-  padding-top: 56px;
-}
-
-.content-wrapper {
-  min-height: calc(100vh - 56px);
-  padding-top: 1rem;
-}
-
-.scroll-to-top {
-  position: fixed;
-  right: 15px;
-  bottom: 3px;
-  display: none;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  color: white;
-  background: rgba(52, 58, 64, 0.5);
-  line-height: 45px;
-}
-
-.scroll-to-top:focus, .scroll-to-top:hover {
-  color: white;
-}
-
-.scroll-to-top:hover {
-  background: #343a40;
-}
-
-.scroll-to-top i {
-  font-weight: 800;
-}
-
-.smaller {
-  font-size: 0.7rem;
-}
-
-.o-hidden {
-  overflow: hidden !important;
-}
-
-.z-0 {
-  z-index: 0;
-}
-
-.z-1 {
-  z-index: 1;
-}
 
 #mainNav .navbar-collapse {
   overflow: auto;
@@ -279,17 +213,6 @@ body.sidenav-toggled #mainNav.static-top #sidenavToggler i {
   -ms-filter: 'FlipH';
 }
 
-.content-wrapper {
-  overflow-x: hidden;
-  background: white;
-}
-
-@media (min-width: 992px) {
-  .content-wrapper {
-    margin-left: 250px;
-  }
-}
-
 #sidenavToggler i {
   font-weight: 800;
 }
@@ -415,59 +338,6 @@ body.sidenav-toggled .navbar-sidenav-tooltip.show {
   #mainNav.navbar-light .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level,
   #mainNav.navbar-light .navbar-collapse .navbar-sidenav > .nav-item .sidenav-third-level {
     background: #f8f9fa;
-  }
-}
-
-.card-body-icon {
-  position: absolute;
-  z-index: 0;
-  top: -25px;
-  right: -25px;
-  font-size: 5rem;
-  -webkit-transform: rotate(15deg);
-  -ms-transform: rotate(15deg);
-  transform: rotate(15deg);
-}
-
-@media (min-width: 576px) {
-  .card-columns {
-    column-count: 1;
-  }
-}
-
-@media (min-width: 768px) {
-  .card-columns {
-    column-count: 2;
-  }
-}
-
-@media (min-width: 1200px) {
-  .card-columns {
-    column-count: 2;
-  }
-}
-
-.card-login {
-  max-width: 25rem;
-}
-
-.card-register {
-  max-width: 40rem;
-}
-
-footer.sticky-footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 56px;
-  background-color: #e9ecef;
-  line-height: 55px;
-}
-
-@media (min-width: 992px) {
-  footer.sticky-footer {
-    width: calc(100% - 250px);
   }
 }
 
