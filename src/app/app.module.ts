@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app.routing.module';
 import { HomeModule } from './home/home.module';
+import { NavigationComponent } from './home/navigation/navigation.component';
 
 
 
@@ -16,7 +17,8 @@ import { HomeModule } from './home/home.module';
     ],
     declarations: [
         AppComponent,
-        HomeComponent
+        HomeComponent,
+        NavigationComponent
     ],
     providers: [],
     bootstrap: [AppComponent]
