@@ -1,3 +1,44 @@
-<p>
-  book-list works!
-</p>
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fa fa-table"></i> Books</div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Isbn</th>
+                        <th>Title</th>
+                        <th>Subtitle</th>
+                        <th>Author</th>
+                        <th>published</th>
+                        <th>Pages</th>
+                        <th>website</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Isbn</th>
+                        <th>Title</th>
+                        <th>Subtitle</th>
+                        <th>Author</th>
+                        <th>published</th>
+                        <th>Pages</th>
+                        <th>website</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr *ngFor="let book of books">
+                        <td>{{ book.isbn }}}</td> 
+                        <td>{{ book.title }}}</td> 
+                        <td>{{ book.subtitle }}}</td> 
+                        <td>{{ book.author }}}</td> 
+                        <td>{{ book.published }}}</td> 
+                        <td>{{ book.pages }}}</td> 
+                        <td>{{ book.website }}}</td> 
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+</div>
