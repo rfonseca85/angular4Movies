@@ -6,12 +6,21 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { BootstrapGridComponent } from './home/bootstrap-grid/bootstrap-grid.component';
 import { TablesComponent } from './home/tables/tables.component';
+import { BookCreateComponent } from './home/book/book-create/book-create.component';
+import { BookListComponent } from './home/book/book-list/book-list.component';
 
 const appRoutes: Routes = [
     {
         path: 'home',
-        component: HomeComponent,
         children: [
+            {
+                path: 'book',
+                children: [
+                    { path: 'create', component: BookCreateComponent },
+                    { path: 'list', component: BookListComponent }
+                ]
+            },
+
             { path: 'bootstrap-grid', component: BootstrapGridComponent },
             { path: 'tables', component: TablesComponent }
         ]
