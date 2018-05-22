@@ -1,33 +1,46 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable } from "rxjs/Observable";
 import { Book } from '../shared/models/book.model';
-
-const httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-};
+import { HttpService } from '../../shared/services/http.service';
+import { EndpointType } from '../../shared/enums/endpoint-type.enum';
 
 @Injectable()
 export class BookService {
 
-    url = 'http://localhost:3000';
+    constructor
+    (
+        private httpService: HttpService
+    ) { }
 
-    constructor(private http: HttpClient) { }
-
-    // getAuthorList(): Observable<any> {
-    //     return this.http.get(this.url + "/author")
-    //        );
+    // getBooks() {
+    //     return this.http.get(this.url + '/books');
     // }
 
-    getBooks() {
-        return this.http.get(this.url + '/books');
+    getBooks(): Observable<Array<Book>>
+    {
+        return this.httpService.get("books", EndpointType.LOCAL);
     }
 
-    createBook(book: Book) {
-        let body = JSON.stringify(book);
-        return this.http.post('/book/', body, httpOptions);
+    saveBook(book: Book): Observable<any>
+    {
+        return this.httpService.post("book", book, EndpointType.LOCAL);
     }
 
+    // getServices(): Observable<Array<Service>>
+    // {
+    //     return this.httpService.get("services", EndpointType.ADMIN);
+    // }
+
+    // getService(serviceId: string): Observable<any>
+    // {
+    //     return this.httpService.get(`services/${serviceId}`, EndpointType.ADMIN);
+    // }
+
+    // saveService(service: Service): Observable<any>
+    // {
+    //     return this.httpService.post("services", service, EndpointType.ADMIN);
+    // }
 
 
 }
+
