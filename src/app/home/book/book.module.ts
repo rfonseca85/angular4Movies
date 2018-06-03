@@ -9,6 +9,8 @@ import { BookComponent } from './book.component';
 import { AppComponent } from '../../app.component';
 import { HomeModule } from '../home.module';
 import { BookService } from './book.service';
+import { HttpService } from '../../shared/services/http.service';
+import { BookResolver } from './book.resolver';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { BookService } from './book.service';
     exports: [
     ],
     providers: [
-        BookService
+        BookService,
+        HttpService,
+        BookResolver
     ],
     bootstrap: [AppComponent]
 })

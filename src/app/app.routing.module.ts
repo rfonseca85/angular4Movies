@@ -8,6 +8,7 @@ import { BootstrapGridComponent } from './home/bootstrap-grid/bootstrap-grid.com
 import { TablesComponent } from './home/tables/tables.component';
 import { BookCreateComponent } from './home/book/book-create/book-create.component';
 import { BookListComponent } from './home/book/book-list/book-list.component';
+import { BookResolver } from './home/book/book.resolver';
 
 const appRoutes: Routes = [
     {
@@ -17,7 +18,11 @@ const appRoutes: Routes = [
                 path: 'book',
                 children: [
                     { path: 'create', component: BookCreateComponent },
-                    { path: 'list', component: BookListComponent }
+                    { 
+                        path: 'list', 
+                        component: BookListComponent,
+                        resolve: { books: BookResolver }
+                    }
                 ]
             },
 

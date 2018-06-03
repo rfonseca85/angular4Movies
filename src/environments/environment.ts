@@ -6,7 +6,7 @@
 export const environment = {
 	production: false,
 	localUrl: "http://localhost:3000",
-	realUrl: "--------------------------------------",
+	realUrl: "http://localhost:3000",
 	type: "dev",
 	envName: "dev"
 };

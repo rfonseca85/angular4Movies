@@ -3,6 +3,8 @@ import { Observable } from "rxjs/Observable";
 import { Book } from '../shared/models/book.model';
 import { HttpService } from '../../shared/services/http.service';
 import { EndpointType } from '../../shared/enums/endpoint-type.enum';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class BookService {
@@ -16,7 +18,7 @@ export class BookService {
     //     return this.http.get(this.url + '/books');
     // }
 
-    getBooks(): Observable<Array<Book>>
+    getBooks(): Observable<Array<any>>
     {
         return this.httpService.get("books", EndpointType.LOCAL);
     }
